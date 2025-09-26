@@ -70,8 +70,7 @@ public class RenderTilePool extends TileEntitySpecialRenderer {
 		GL11.glScalef(1F, -1F, -1F);
 		if(fab) {
 			float time = ClientTickHandler.ticksInGame + ClientTickHandler.partialTicks;
-			if(tileentity != null)
-				time += new Random(tileentity.xCoord ^ tileentity.yCoord ^ tileentity.zCoord).nextInt(100000);
+            time += new Random(tileentity.xCoord ^ tileentity.yCoord ^ tileentity.zCoord).nextInt(100000);
 
 			Color color = Color.getHSBColor(time * 0.005F, 0.6F, 1F);
 			GL11.glColor4ub((byte) color.getRed(), (byte) color.getGreen(), (byte) color.getBlue(), (byte) 255);
