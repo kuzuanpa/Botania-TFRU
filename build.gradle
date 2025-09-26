@@ -37,7 +37,7 @@ ext.priv = parseConfig(file('private.properties.example'))
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-version = "${config.version}-${config.build_number}"
+version = "${config.version}"
 group = "vazkii.botania" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = config.mod_name
 
