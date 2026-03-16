@@ -28,7 +28,7 @@ public final class VersionChecker {
 	private static final int FLAVOUR_MESSAGES = 65;
 
 	public static boolean doneChecking = false;
-	public static String onlineVersion = "0.0.0";
+	public static String onlineVersion = "0";
 	public static boolean triedToWarnPlayer = false;
 
 	public static boolean startedDownload = false;
