@@ -15,12 +15,11 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
-import vazkii.botania.common.core.version.ThreadDownloadMod;
 import vazkii.botania.common.core.version.VersionChecker;
 
 public class CommandDownloadLatest extends CommandBase {
 
-	private static final boolean ENABLED = true;
+	private static final boolean ENABLED = false;
 
 	@Override
 	public String getCommandName() {
@@ -42,7 +41,7 @@ public class CommandDownloadLatest extends CommandBase {
 				var1.addChatMessage(new ChatComponentTranslation("botania.versioning.downloadedAlready").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 			else if(VersionChecker.startedDownload)
 				var1.addChatMessage(new ChatComponentTranslation("botania.versioning.downloadingAlready").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
-			else new ThreadDownloadMod("Botania " + var2[0] + ".jar");
+			//else new ThreadDownloadMod("Botania " + var2[0] + ".jar");
 	}
 
 }
