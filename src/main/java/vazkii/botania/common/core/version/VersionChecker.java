@@ -39,7 +39,7 @@ public final class VersionChecker {
 		FMLCommonHandler.instance().bus().register(this);
 	}
 
-	@SubscribeEvent
+	//@SubscribeEvent
 	public void onTick(ClientTickEvent event) {
 		if(doneChecking && event.phase == Phase.END && Minecraft.getMinecraft().thePlayer != null && !triedToWarnPlayer) {
 			if(!onlineVersion.isEmpty()) {
