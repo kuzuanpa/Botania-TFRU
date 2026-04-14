@@ -28,7 +28,7 @@ public class SubTileDandelifeon extends SubTileGenerating {
 	private static final int RANGE = 12;
 	private static final int SPEED = 10;
 	private static final int MAX_GENERATIONS = 100;
-	private static final int MANA_PER_GEN = 60;
+	private static final int MANA_PER_GEN = 600;
 
 	private static final int[][] ADJACENT_BLOCKS = new int[][] {
 		{ -1, -1 },
@@ -51,8 +51,7 @@ public class SubTileDandelifeon extends SubTileGenerating {
 
 	void runSimulation() {
 		int[][] table = getCellTable();
-		List<int[]> changes = new ArrayList();
-		new ArrayList();
+		List<int[]> changes = new ArrayList<>();
 		boolean wipe = false;
 
 		for(int i = 0; i < table.length; i++)
@@ -122,10 +121,8 @@ public class SubTileDandelifeon extends SubTileGenerating {
 
 	int getCellGeneration(int x, int y, int z) {
 		TileEntity tile = supertile.getWorldObj().getTileEntity(x, y, z);
-		if(tile instanceof TileCell)
-			return ((TileCell) tile).isSameFlower(supertile) ? ((TileCell) tile).getGeneration() : 0;
-
-			return -1;
+		if(tile instanceof TileCell) return ((TileCell) tile).isSameFlower(supertile) ? ((TileCell) tile).getGeneration() : 0;
+		return -1;
 	}
 
 	int getAdjCells(int[][] table, int x, int z) {
@@ -192,7 +189,7 @@ public class SubTileDandelifeon extends SubTileGenerating {
 
 	@Override
 	public int getMaxMana() {
-		return 50000;
+		return 500000;
 	}
 
 	@Override

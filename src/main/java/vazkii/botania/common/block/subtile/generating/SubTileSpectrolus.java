@@ -54,7 +54,7 @@ public class SubTileSpectrolus extends SubTileGenerating {
 				int meta = stack.getItemDamage();
 				if(meta == nextColor) {
 					if(!remote) {
-						mana = Math.min(getMaxMana(), mana + 600);
+						mana = Math.min(getMaxMana(), mana + 300);
 						nextColor = nextColor == 15 ? 0 : nextColor + 1;
 						sync();
 					}

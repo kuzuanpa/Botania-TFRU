@@ -56,16 +56,15 @@ public class SubTileMusicDanclius extends SubTileGenerating {
         }
        if (HappyEnergy > 0) HappyEnergy --;
 
-        for (int x=supertile.xCoord -RANGE;x<supertile.xCoord+RANGE;x++){
+
+       for (int x=supertile.xCoord -RANGE;x<supertile.xCoord+RANGE;x++){
             for (int z=supertile.zCoord -RANGE;z<supertile.zCoord+RANGE;z++){
                 supertile.getWorldObj().spawnParticle("minecraft:note", x, supertile.yCoord + 0.1, z, 0.0D, 0.1D, 0.0D);
-    }}}
-public boolean isCoordEqual(int[] set1,int[] set2){
+            }}}
+    public boolean isCoordEqual(int[] set1,int[] set2){
         if(set1.length != set2.length) return false;
-        for (int i=0;i < set1.length;i++){
-          if (set1[i] != set2[i]) return false;
-        }
-    CoordEqual = true;
+        for (int i=0;i < set1.length;i++)if (set1[i] != set2[i]) return false;
+        CoordEqual = true;
         return true;
     }
     @Override
@@ -93,7 +92,7 @@ public boolean isCoordEqual(int[] set1,int[] set2){
     }
     @Override
     public int getDelayBetweenPassiveGeneration() {
-        return 1;
+        return 2;
     }
 @Override
     public boolean canGeneratePassively() {
