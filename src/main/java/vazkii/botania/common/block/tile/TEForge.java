@@ -63,8 +63,6 @@ public class TEForge extends NetworkTileEntity implements IInventory ,IManaRecei
 					temp -= TFC_ItemHeat.getTempDecrease(is);
 				TFC_ItemHeat.setTemp(is, temp);
 				}
-
-
 			}
 		}
 	}
@@ -76,9 +74,9 @@ public class TEForge extends NetworkTileEntity implements IInventory ,IManaRecei
 		return 2500;
 	}
 
-	public int getTemperatureScaled(int s)
+	public int getTemperatureScaled(int height)
 	{
-		return (int)(fireTemp * s / maxFireTempScale);
+		return (int)(Math.min(1800,fireTemp)* height / 1800);
 	}
 
 
