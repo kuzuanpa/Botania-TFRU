@@ -1380,7 +1380,7 @@ public final class ModCraftingRecipes {
 		recipeUltraSpreader = BotaniaAPI.getLatestAddedRecipe();
 
 		// Wing Recipes
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.flightTiara, 1, 1), new ItemStack(ModItems.flightTiara, 1, Short.MAX_VALUE), "gemQuartz"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.flightTiara, 1, 1), new ItemStack(ModItems.flightTiara, 1, Short.MAX_VALUE), Items.quartz));
 		for(int i = 0; i < 7; i++)
 			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.flightTiara, 1, 2 + i), new ItemStack(ModItems.flightTiara, 1, Short.MAX_VALUE), LibOreDict.QUARTZ[i]));
 		recipesWings = BotaniaAPI.getLatestAddedRecipes(8);
